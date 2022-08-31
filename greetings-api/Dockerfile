@@ -24,12 +24,12 @@ RUN cd /tmp && git clone https://github.com/oatpp/oatpp.git && \
 
 # Build this project
 
-COPY . /opt/simplest-project
+COPY . /opt/greetings-api
 
-RUN cd /opt/simplest-project && \
+RUN cd /opt/greetings-api && \
     cmake -B build -G Ninja && \
     cmake --build build
 
 EXPOSE 8000
 
-CMD ["/opt/simplest-project/build/simplest-project-exe"]
+CMD ["/opt/greetings-api/build/greetings-api-exe"]

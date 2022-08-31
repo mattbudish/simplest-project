@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  gateway:
+    build: gateway/
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "8080:8080"
+    networks:
+      - api-gateway
+
+  greetings-api:
+    build: greetings-api/
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - api-gateway
+
+networks:
+  api-gateway:

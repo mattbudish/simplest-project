@@ -25,7 +25,7 @@ void run() {
     oatpp::network::Server server(connectionProvider, connectionHandler);
 
     /* Print info about server port */
-    OATPP_LOGI("SimplestProject", "Server running on port %s", connectionProvider->getProperty("port").getData());
+    OATPP_LOGI("Greetings API", "Server running on port %s", connectionProvider->getProperty("port").getData());
 
     /* Run server */
     server.run();

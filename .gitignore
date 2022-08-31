@@ -1,2 +1,3 @@
-build/
+greetings-api/build/
 .vscode/
+gateway/gateway/node_modules/
