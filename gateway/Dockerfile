@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-LABEL maintainer="Matt Budish <matt.budish@digikey.com>"
+LABEL maintainer="Matt Budish <mtbudish@gmail.com>"
 
 RUN npm install -g express-gateway
 

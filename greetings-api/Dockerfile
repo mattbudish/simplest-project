@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="Matt Budish <matt.budish@digikey.com>"
+LABEL maintainer="Matt Budish <mtbudish@gmail.com>"
 
 # Install build tools
 

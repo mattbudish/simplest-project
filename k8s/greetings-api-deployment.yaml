@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greetings-api
+  labels:
+    app: greetings-api
+  namespace: simplest-project
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: greetings-api
+  template:
+    metadata:
+      labels:
+        app: greetings-api
+    spec:
+      containers:
+        - name: greetings-api
+          image: registry.oak.initsw.dev/mtb/greetings-api
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "1024Mi"
+              cpu: "2000m"

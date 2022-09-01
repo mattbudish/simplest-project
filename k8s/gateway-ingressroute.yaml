@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: gateway
+  namespace: simplest-project
+spec:
+  entryPoints:
+  - websecure
+  routes:
+  - kind: Rule
+    match: Host(`api-gateway.example.com`)
+    priority: 10
+    services:
+    - name: gateway
+      port: 80
+  tls:
+    certResolver: default
